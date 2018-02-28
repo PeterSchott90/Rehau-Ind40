@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-card-title>Game Rules (Quest)</mat-card-title>
+  <mat-card-content class="flex-container" fxLayoutWrap="wrap" fxLayout="row" fxLayoutAlign="center" fxLayoutAlign.xs="start">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput required ngModel name="name" placeholder="Quest Name">
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput required ngModel name="groupId" placeholder="Group ID">
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput required ngModel name="a" placeholder="Amount Product A">
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput required ngModel name="b" placeholder="Amount Product B">
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput required ngModel name="c" placeholder="Amount Product C">
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput required ngModel name="points" placeholder="Bonus Points">
+        </mat-form-field>
+      </div>
+
+      <button mat-raised-button color="primary">Submit Quest</button>
+    </form>
+  </mat-card-content>
+</mat-card>

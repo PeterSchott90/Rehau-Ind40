@@ -1,0 +1,27 @@
+<ion-content *ngIf="this.mainTutorial">
+  <div class="bodydiv" style="height: 100%; background-color: #f8f8f8">
+    <ion-slides pager="true" dir="ltr">
+      <ion-slide *ngFor="let slide of slides">
+        <img [src]="slide.IMAGE" class="slide-image" />
+        <h2 class="slide-title" [innerHTML]="slide.TITLE"></h2>
+        <p [innerHTML]="slide.DESC"></p>
+      </ion-slide>
+      <ion-slide>
+        <ion-icon class="slide-icon" name="checkmark" color="primary"></ion-icon>
+        <h2 class="slide-title">{{ 'TUT_END_HEAD' | translate }}</h2>
+        <p>{{ 'TUT_END_PAR' | translate }}</p>
+        <button ion-button icon-end (click)="closeSlides()">
+          START
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+<ion-tabs>
+  <ion-tab tabIcon="school" tabTitle="{{learn}}" [root]="learnMenuPage"></ion-tab>
+  <ion-tab enabled="{{enableTabs}}" tabIcon="basket" tabTitle="{{submit}}" [root]="customerSubmitPage"></ion-tab>
+  <ion-tab enabled="{{enableTabs}}" tabIcon="stats" tabTitle="{{orders}}" [root]="customerOrdersPage"></ion-tab>
+  <ion-tab enabled="{{enableTabs}}" tabIcon="clipboard" tabTitle="{{quests}}" [root]="customerQuestsPage"></ion-tab>
+  <ion-tab enabled="{{enableTabs}}" tabIcon="trophy" tabTitle="{{score}}" [root]="customerScorePage"></ion-tab>
+</ion-tabs>

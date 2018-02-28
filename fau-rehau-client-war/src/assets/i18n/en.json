@@ -1,0 +1,205 @@
+{
+  "BACK_BUTTON_TEXT": "Back",
+
+  "CANCEL": "Cancel",
+
+  "GAME_OVER_TITLE": "Game over",
+  "GAME_OVER_HEAD": "Thank you for your participation",
+  "GAME_OVER_PART": "Participant",
+  "GAME_OVER_BTN": "Try again",
+
+  "GROUP_SEL_TITLE": "Group selection",
+  "GROUP_SEL_HEAD": "Please scan the QR-code next to you in order to get assigned to a group.",
+
+  "QR_BTN": "Scan QR-Code",
+  "QR_ERR_TITLE": "Error",
+  "QR_ERR_SUBTITLE": "Error: ",
+
+  "NAME_SEL_TITLE": "Username",
+  "NAME_SEL_NAME": "Please enter a username",
+  "NAME_SEL_BTN": "Next",
+
+  "QUIZ_HEAD": "Answers",
+  "QUIZ_WRONG": "Sorry this was wrong! Please try again.",
+
+  "GAME_NOT_STARTED": "Game has not started yet.",
+
+  "ROLE_SEL_TITLE": "Role selection",
+  "ROLE_SEL_CUST_HEAD": "Customer",
+  "ROLE_SEL_CUST_SUBHEAD": "Play the simulation as a customer",
+  "ROLE_SEL_CUST_PAR": "The customer takes order etc.",
+  "ROLE_SEL_PROD_HEAD": "Producer",
+  "ROLE_SEL_PROD_SUBHEAD": "Play the simulation as a producer",
+  "ROLE_SEL_PROD_PAR": "The producer manages machines and orders...",
+
+  "CUST_ORDER_OPEN": "Open orders",
+  "CUST_ORDER_WAIT": "Waiting orders",
+  "CUST_ORDER_DONE": "Done orders",
+
+  "CUST_QUESTS_OPEN_HEAD": "Open orders",
+  "CUST_QUESTS_DONE_HEAD": "Done orders",
+  "CUST_QUESTS_ORDER": "Order",
+  "CUST_QUESTS_LIGHT": "Light products: ",
+  "CUST_QUESTS_MED": "Medium products: ",
+  "CUST_QUESTS_PRO": "Professional: ",
+  "CUST_QUESTS_TAKE": "Take Quest",
+
+  "LEARN": "Learn",
+  "SCORE": "Score",
+  "ORDERS": "Orders",
+  "REPAIR": "Repair",
+
+  "LEARN_TITLE": "Knowledge",
+  "LEARN_DIG_TRANS": "Digital Transformation",
+  "LEARN_IND40": "Industry 4.0",
+  "LEARN_TERMS": "Terms and Definitions",
+
+  "SLIDE_END_HEAD": "Learn unit finished!",
+  "SLIDE_END_PAR": "This learn unit is finished, the Back button links to the previous menu.",
+
+  "START_HEAD": "Good luck!",
+  "START_PAR": "As soon as the admin starts the game all functionality will be available. For the time beeing, only the knowledge page is active.",
+  "START_PAR_BTN": "I understand",
+  "CUST_START_SUBHEAD": "As soon as the admin starts the game it begins!",
+  "PROD_START_SUBHEAD": "As soon as the admin starts the game it begins!",
+  "START_BTN": "Play now",
+  "GAME_BEGIN_HEAD": "The Game starts now!",
+  "GAME_BEGIN_PAR": "All functions are active. Have Fun!",
+
+  "CUST_TAB_SUBMIT": "New Order",
+  "CUST_TAB_ORDERS": "Status",
+  "CUST_TAB_QUESTS": "Orders",
+
+  "CUST_SUB_HEAD": "Order new product",
+  "CUST_SUB_L_HEAD": "Light product",
+  "CUST_SUB_L_PAR": "The cheapest version",
+  "CUST_SUB_M_HEAD": "Medium product",
+  "CUST_SUB_M_PAR": "The medium priced version",
+  "CUST_SUB_P_HEAD": "Professional product",
+  "CUST_SUB_P_PAR": "The professional product",
+
+  "ORDER_DETAIL": "Attributes",
+
+  "PROD_MACH_PLURAL": "Machines",
+  "PROD_MACH_SINGULAR": "Machine",
+  "PROD_MACH_COSTS": "Costs",
+  "PROD_MACH_WORKLOAD": "Workload",
+  "PROD_MACH_NEED_REP": "Machine needs repair",
+  "PROD_MACH_REPAIRING": "Machine is repairing",
+  "PROD_MACH_SEL": "Select machine",
+  "PROD_MACH_REPAIR": "Repair machine",
+  "PROD_MACH_SELECTED": "SELECTED",
+
+  "PROD_ORDER_WAIT": "Waiting orders",
+  "PROD_ORDER_APPROVE": "Approve order",
+  "PROD_ORDER_QUEUE": "Order queue",
+
+  "ERR_MSG_404": "Error connecting to Server",
+  "ERR_MSG_409": "Name is already in use",
+  "ERR_MSG_412": "Not enough resources",
+  "ERR_MSG_413": "Selected machine is busy",
+  "ERR_MSG_406": "Game ",
+  "ERR_MSG_ELSE": "Unexpected Server Error ",
+
+  "WELCOME": "Welcome",
+  "WELCOME_PAR": "Please select your prefered language.",
+
+  "NAME_PLACEHOLDER": "Edit to continue",
+
+  "TUT_END_HEAD": "Tutorial finished!",
+  "TUT_END_PAR": "The tutorial is finished. Alle game functions are active now.",
+
+  "TUT_SLIDES_CUST": [
+    {
+      "IMAGE": "assets/pictures/orders-en.png",
+      "TITLE": "Quests",
+      "DESC": "The Administrator sends Quests that have to be accepted and fulfilled. If completed you are awarded bonus points."
+    }, {
+      "IMAGE": "assets/pictures/neworder-en.png",
+      "TITLE": "Order products",
+      "DESC": "Quests can be completed by ordering products. Therefore, you have to set the amount and scan the corresponding QR-Code."
+    }, {
+      "IMAGE": "assets/pictures/status-en.png",
+      "TITLE": "Status",
+      "DESC": "This displays the status of all orders. Waiting orders have not yet been accepted by the producer."
+    }
+  ],
+
+  "TUT_SLIDES_PROD": [
+    {
+      "IMAGE": "assets/pictures/ordersP-en.png",
+      "TITLE": "Orders",
+      "DESC": "The customer orders products which have to be distributed to the machines."
+    }, {
+      "IMAGE": "assets/pictures/machines-en.png",
+      "TITLE": "Machines",
+      "DESC": "This displays the workload of the machines. If a machine is overloaded you have to produce on another machine."
+    }, {
+      "IMAGE": "assets/pictures/repair-en.png",
+      "TITLE": "Repair",
+      "DESC": "Machines can break! They can be repaired on this page."
+    }
+  ],
+
+  "LEARN_SLIDES_DIG_TRANS": [
+    {
+      "IMAGE": "assets/pictures/dig-def.png",
+      "TITLE": "Definition",
+      "DESC": "Digital Transformation terms the <b>constant transition</b> of our world enabled by <b>digital technologies</b>. One example in the private area is the mobile phone. It used to be a simple wireless phone and today we are able to control our homes with a smartphone."
+    }, {
+      "IMAGE": "assets/pictures/dig-enab.png",
+      "TITLE": "Enabler",
+      "DESC": "Alle new <b>technologies and potentials of the digital transformation</b> are called Enabler. They provide different uses for all actors. For instance, through Enabler a company has the potential to optimize their logistic for procurement, while they are exchanging data with their supplier automatically."
+    }, {
+      "IMAGE": "assets/pictures/dig-act.png",
+      "TITLE": "Actors",
+      "DESC": "Actors within the digital transformation are, besides <b>companys</b>, also the <b>government</b>, which supports and regulates, <b>science</b>, which provides new insights, and furthermore, all <b>individuals and communities</b>, which use the new technologies."
+    }
+  ],
+  "LEARN_SLIDES_IND40": [
+    {
+      "IMAGE": "assets/pictures/ind-def.png",
+      "TITLE": "Definition",
+      "DESC": "Industry 4.0 is a <b>science project</b> of the german government. It purpose is to find <b>innovative solutions</b> in the context of the <b>digital transformation</b> for companies in the production business and to show <b>strategies to overcome the challenges</b>."
+    }, {
+      "IMAGE": "assets/pictures/ind-hist.png",
+      "TITLE": "Why 4.0?",
+      "DESC": "4.0 stands for the <b>fourth industrial revolution</b>. The first industrial revolution took place in the end of the 18th century while the <b>steamengine</b> was invented. One centruy later the secone with assembly lines and <b>mass production</b>. Electronic controls and IT to <b>automatize production</b> labels the third revolution."
+    }, {
+      "IMAGE": "assets/pictures/ind-40.png",
+      "TITLE": "Basic Principles",
+      "DESC": "<b>Connectivity:</b> see Ínternet of Things´<br><b>Information transparency:</b> Sensor data create a virtual image of the real world<br><b>Technical assistence:</b> Support via data and robots<br><b>Decentral decisions:</b> ´Cyber-physical Systems´ work autonomosly"
+    }
+  ],
+  "LEARN_SLIDES_TERMS": [
+    {
+      "IMAGE": "assets/pictures/ind-40.png",
+      "TITLE": "Cyber-physical Systems",
+      "DESC": "A Cyber-physical System (<b>CPS</b>) connects physical and digital components. It consists of a <b>embedded system with sensors and actuators</b> to collect data and control mechanical processes. Moreover, they are connected with other CPS over the internet and thus exchange data."
+    }, {
+      "IMAGE": "assets/pictures/terms-iot.png",
+      "TITLE": "Internet of Things",
+      "DESC": "The internet of things (<b>IoT</b>) is a <b>network</b> of physical devices and all <b>objects capable to connect and exchange data</b>."
+    }, {
+      "IMAGE": "assets/pictures/terms-ios.png",
+      "TITLE": "Internet of Services",
+      "DESC": "The internet of services (<b>IoS</b>) provides <b>web-based services</b> in the context of IoT. These services process the <b>collected sensor data</b> and allow, for instance, <b>cloud applications</b>, Big Data analysis or realtime evaluations"
+    }, {
+      "IMAGE": "assets/pictures/terms-rfid.png",
+      "TITLE": "RFID",
+      "DESC": "RFID means <b>Radio-Frequenzy Identification</b>. A RFID-System always consists of a <b>tag</b> and a reading device. A tag <b>stores data without the use of a powersource</b>. The reading device scans the tag <b>wireless</b> and can even <b>localize</b> it. This makes the technology especially interesting for logistical purposes."
+    }, {
+      "IMAGE": "assets/pictures/terms-sf.png",
+      "TITLE": "Smart Factory",
+      "DESC": "A <b>´Smart Factory´</b> is a factory that uses <b>technologies of Industry 4.0 in their production</b>. Thereby, a company is, for instance, capable of reacting to malfunctions and unpredictable events way faster than before."
+    }, {
+      "IMAGE": "assets/pictures/terms-hor.png",
+      "TITLE": "Horizontal Integration",
+      "DESC": "Horizontal integration can happen <b>inside and outside</b> of a company. Inside means a <b>optimal material and data flow throughouth the value chain</b>. Outside means the same thing, but even <b>beyond the boundaries of a company</b>."
+    }, {
+      "IMAGE": "assets/pictures/terms-vert.png",
+      "TITLE": "Vertical Integration",
+      "DESC": "Vertical integration can be identified as the <b>optimal data flow among all levels of a company</b>. This means from the top management level down to the production machines and also in reverse order."
+    }
+  ]
+}

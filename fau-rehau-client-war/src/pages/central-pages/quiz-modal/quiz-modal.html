@@ -1,0 +1,24 @@
+<ion-content center text-center class="content">
+  <h1>Quiz</h1>
+  <flash-card [isFlipped]="flashCardFlipped">
+    <div class="flash-card-front" [innerHTML]="flashCardFront"></div>
+    <div class="flash-card-back" [innerHTML]="flashCardBack"></div>
+  </flash-card>
+  <h3>{{ context }}</h3>
+
+
+  <ion-list no-lines radio-group>
+
+    <ion-list no-lines radio-group>
+
+      <ion-item class="answer-item" *ngFor="let answer of answers; let i = index;">
+
+        <ion-label>{{i+1}}. {{answer.answer}}</ion-label>
+        <ion-radio (click)="selectAnswer(answer)" [checked]="answer.selected" [disabled]="hasAnswered"></ion-radio>
+
+      </ion-item>
+
+    </ion-list>
+
+  </ion-list>
+</ion-content>

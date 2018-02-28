@@ -1,0 +1,27 @@
+page-quiz-modal {
+  .content {
+    color: #fff;
+    background-color: map-get($colors, primary);
+  }
+  h1 {
+    padding-top: 0.7em;
+  }
+  flash-card {
+    color: #fff;
+    .flash-card-front {
+      font-size: 1.8em;
+      padding: 1em;
+      width: 100%;
+      height: auto;
+    }
+    .flash-card-back {
+      font-size: 1.8em;
+    }
+  }
+  .answer-item {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    background-color: map-get($colors, light-prim);
+  }
+}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-left>
+        <ion-icon name="cash"></ion-icon>
+        {{ this.userService.currentPlayer.currentMoney }} €
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      {{ 'PROD_MACH_PLURAL' | translate }}
+    </ion-list-header>
+    <ion-item [style.margin-bottom.px]="20" *ngFor="let item of this.userService.currentPlayer.machines; let i = index">
+      <h2>{{ 'PROD_MACH_SINGULAR' | translate }} {{i}}</h2>
+      <span *ngIf="item.active === true" style="margin-left:40px; color:green; text-decoration: underline;">{{ 'PROD_MACH_SELECTED' | translate}}</span>
+<div *ngIf="item.status !== 'NEED_REPAIR' && item.status !== 'REPAIRING'" class="workload">
+  <div class="current-state" [style.margin-left.%]="item.workloadPercentage"></div>
+  <div class="current-value">{{item.workloadPercentage}}%</div>
+</div>
+<div *ngIf="item.status === 'NEED_REPAIR'">
+  <h2>{{ 'PROD_MACH_NEED_REP' | translate }} </h2>
+</div>
+<div *ngIf="item.status === 'REPAIRING'">
+  <h2>{{ 'PROD_MACH_REPAIRING' | translate }} </h2>
+  <h3>{{item.freezeTime}}s</h3>
+</div>
+<button style="float:leftt;"(tap)="setMachine(i);" ion-button clear item-right>{{ 'PROD_MACH_SEL' | translate }}</button>
+
+</ion-item>
+
+</ion-list>
+</ion-content>

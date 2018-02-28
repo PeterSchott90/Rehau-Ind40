@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-left>
+        <ion-icon name="cash"></ion-icon>
+        {{ this.userService.currentPlayer.currentMoney }} €
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<h2>{{ 'SCORE' | translate }}</h2>
+ <ion-list inset>
+   <div class="scoreboard">
+    <ion-item *ngFor="let player of this.userService.scoreboardEntries">
+        <h2>{{player.name}}</h2>
+        <h2 item-right>{{player.score}}</h2>
+    </ion-item>
+   </div>
+  </ion-list>
+</ion-content>

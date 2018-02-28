@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button (tap)="dismiss()" ion-button>
+        <ion-icon name="close">{{ 'BACK_BUTTON_TEXT' | translate }}</ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+    <ion-list-header>
+      {{ 'ORDER_DETAIL' | translate }}
+    </ion-list-header>
+    <div class="attribute" *ngFor="let attribute of this.product.fauRehauAttributes">
+      <h2>{{attribute.name}}</h2>
+      <div class="scale">
+        <div [style.margin-left.%]="(attribute.currentValue - (attribute.minValue - (attribute.maxValue - attribute.minValue))) / (3*(attribute.maxValue - attribute.minValue))*100" class="current-state"></div>
+        <div class="current-value">{{attribute.currentValue}}</div>
+      </div>
+    </div>
+    </ion-list>
+   <!-- <button (tap)="cancelOrder()" ion-button icon-left>
+   // <ion-icon name="cancel"></ion-icon>
+   // Bestellung Abbrechen
+   // </button> !-->
+</ion-content>

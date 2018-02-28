@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'LEARN_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+  <ion-card (click)="openSlides('DIG_TRANS')">
+    <div class="darken">
+      <img src="assets/pictures/dig-trans.jpeg"/>
+    </div>
+    <div class="card-title">{{ 'LEARN_DIG_TRANS' | translate }}</div>
+  </ion-card>
+
+  <ion-card (click)="openSlides('IND40')">
+    <div class="darken">
+      <img src="assets/pictures/ind4.jpeg"/>
+    </div>
+    <div class="card-title">{{ 'LEARN_IND40' | translate }}</div>
+  </ion-card>
+
+  <ion-card (click)="openSlides('TERMS')">
+    <div class="darken">
+      <img src="assets/pictures/terms-and-def.jpeg"/>
+    </div>
+    <div class="card-title">{{ 'LEARN_TERMS' | translate }}</div>
+  </ion-card>
+
+</ion-content>

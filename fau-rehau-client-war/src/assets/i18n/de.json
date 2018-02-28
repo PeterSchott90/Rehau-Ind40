@@ -1,0 +1,205 @@
+{
+  "BACK_BUTTON_TEXT": "Zurück",
+
+  "CANCEL": "Abbrechen",
+
+  "GAME_OVER_TITLE": "Spiel beendet",
+  "GAME_OVER_HEAD": "Vielen Dank für Ihre Teilnahme",
+  "GAME_OVER_PART": "Teilnehmer",
+  "GAME_OVER_BTN": "Erneut spielen!",
+
+  "GROUP_SEL_TITLE": "Gruppenauswahl",
+  "GROUP_SEL_HEAD": "Zur Gruppenzuweisung bitte den QR-Code in Ihrer Nähe einscannen.",
+
+  "QR_BTN": "QR-Code scannen",
+  "QR_ERR_TITLE": "Fehler",
+  "QR_ERR_SUBTITLE": "Folgender Fehler ist aufgetreten: ",
+
+  "NAME_SEL_TITLE": "Benutzername",
+  "NAME_SEL_NAME": "Für die Applikation wird ein Benutzername benötigt.",
+  "NAME_SEL_BTN": "Weiter",
+
+  "QUIZ_HEAD": "Antwortmöglichkeiten",
+  "QUIZ_WRONG": "Leider falsch! Versuchen Sie es erneut",
+
+  "GAME_NOT_STARTED": "Spiel wurde noch nicht gestartet.",
+
+  "ROLE_SEL_TITLE": "Rollenauswahl",
+  "ROLE_SEL_CUST_HEAD": "Kunde",
+  "ROLE_SEL_CUST_SUBHEAD": "Die Simulation als Kunde spielen",
+  "ROLE_SEL_CUST_PAR": "Der Kunde stellt Aufträge usw.",
+  "ROLE_SEL_PROD_HEAD": "Produzent",
+  "ROLE_SEL_PROD_SUBHEAD": "Die Simulation als Produzent spielen",
+  "ROLE_SEL_PROD_PAR": "Der Produzent ist zuständig für die Bearbeitung...",
+
+  "CUST_ORDER_OPEN": "Offene Bestellungen",
+  "CUST_ORDER_WAIT": "Wartende Bestellungen",
+  "CUST_ORDER_DONE": "Erledigte Bestellungen",
+
+  "CUST_QUESTS_OPEN_HEAD": "Offene Aufträge",
+  "CUST_QUESTS_DONE_HEAD": "Erledigte Aufträge",
+  "CUST_QUESTS_ORDER": "Auftrag",
+  "CUST_QUESTS_LIGHT": "Lightprodukte: ",
+  "CUST_QUESTS_MED": "Mediumprodukte: ",
+  "CUST_QUESTS_PRO": "Professional: ",
+  "CUST_QUESTS_TAKE": "Annehmen",
+
+  "LEARN": "Lernen",
+  "SCORE": "Spielstand",
+  "ORDERS": "Bestellungen",
+  "REPAIR": "Wartung",
+
+  "LEARN_TITLE": "Wissen",
+  "LEARN_DIG_TRANS": "Digitale Transformation",
+  "LEARN_IND40": "Industrie 4.0",
+  "LEARN_TERMS": "Begriffe und Definitionen",
+
+  "SLIDE_END_HEAD": "Lerneinheit beendet!",
+  "SLIDE_END_PAR": "Die Lerneinheit ist zu Ende, per Zurück geht es wieder in das Wissensmenü.",
+
+  "START_HEAD": "Viel Erfolg!",
+  "START_PAR": "Sobald der Administrator das Spiel startet werden alle Funktionen freigeschaltet. Solange steht nur der Wissensbereich zur Verfügung.",
+  "START_PAR_BTN": "Verstanden",
+  "CUST_START_SUBHEAD": "Sobald der Administrator das Spiel startet kann es los gehen!",
+  "PROD_START_SUBHEAD": "Sobald das Spiel gestartet wurde erscheint hier der Button zum loslegen!",
+  "START_BTN": "Jetzt spielen",
+  "GAME_BEGIN_HEAD": "Das Spiel beginnt!",
+  "GAME_BEGIN_PAR": "Ab sofort sind alle Funktionen freigeschaltet. Viel Spaß!",
+
+  "CUST_TAB_SUBMIT": "Bestellen",
+  "CUST_TAB_ORDERS": "Status",
+  "CUST_TAB_QUESTS": "Aufträge",
+
+  "CUST_SUB_HEAD": "Neues Produkt bestellen",
+  "CUST_SUB_L_HEAD": "Light Produkt",
+  "CUST_SUB_L_PAR": "Die günstigste Variante",
+  "CUST_SUB_M_HEAD": "Normal Produkt",
+  "CUST_SUB_M_PAR": "Die normale Variante",
+  "CUST_SUB_P_HEAD": "Professional Produkt",
+  "CUST_SUB_P_PAR": "Die professionelle Variante",
+
+  "ORDER_DETAIL": "Attribute",
+
+  "PROD_MACH_PLURAL": "Maschinen",
+  "PROD_MACH_SINGULAR": "Maschine",
+  "PROD_MACH_COSTS": "Kosten",
+  "PROD_MACH_WORKLOAD": "Auslastung",
+  "PROD_MACH_NEED_REP": "Maschine ist defekt",
+  "PROD_MACH_REPAIRING": "Maschine wird repariert",
+  "PROD_MACH_SEL": "Maschine auswählen",
+  "PROD_MACH_REPAIR": "Wartung durchführen",
+  "PROD_MACH_SELECTED": "AUSGEWÄHLT",
+
+  "PROD_ORDER_WAIT": "Offene Bestellungen",
+  "PROD_ORDER_APPROVE": "Bestellung annehmen",
+  "PROD_ORDER_QUEUE": "Laufende Bestellungen",
+
+  "ERR_MSG_404": "Fehler mit der Verbindung zum Server",
+  "ERR_MSG_409": "Name bereits vergeben",
+  "ERR_MSG_412": "Es stehen nicht genug Ressourcen zur Verfügung",
+  "ERR_MSG_413": "Ausgewählte Maschine ist beschäftigt",
+  "ERR_MSG_406": "Game ",
+  "ERR_MSG_ELSE": "Unerwateter Serverfehler ",
+
+  "WELCOME": "Willkommen",
+  "WELCOME_PAR": "Bitte zunächst die gewünschte Sprache auswählen.",
+
+  "NAME_PLACEHOLDER": "Editieren um fortzufahren",
+
+  "TUT_END_HEAD": "Tutorial beendet!",
+  "TUT_END_PAR": "Das Tutorial ist zu Ende, alle Bereiche sind nun freigeschaltet.",
+
+  "TUT_SLIDES_CUST": [
+    {
+      "IMAGE": "assets/pictures/auftr-de.png",
+      "TITLE": "Aufträge",
+      "DESC": "Der Administrator stellt Aufträge die angenommen und erfüllt werden müssen. Bei Erfüllung erhält man die festgelegten Bonuspunkte."
+    }, {
+      "IMAGE": "assets/pictures/order-de.png",
+      "TITLE": "Produkte bestellen",
+      "DESC": "Die Aufträge können durch das Bestellen von Produkten erfüllt werden. Dafür die Menge auswählen und den entsprechenden QR-Code scannen."
+    }, {
+      "IMAGE": "assets/pictures/status-de.png",
+      "TITLE": "Status",
+      "DESC": "Hier sieht man den Status der Bestellungen. Wartende Bestellungen wurden noch nocht vom Produzenten bearbeitet."
+    }
+  ],
+
+  "TUT_SLIDES_PROD": [
+    {
+      "IMAGE": "assets/pictures/ordersP-de.png",
+      "TITLE": "Bestellungen",
+      "DESC": "Der Kunde bestellt Produkte, die als Bestellungen eintreffen und auf die Maschinen verteilt werden müssen."
+    }, {
+      "IMAGE": "assets/pictures/machines-de.png",
+      "TITLE": "Maschinen",
+      "DESC": "Hier wird die Auslastung der Maschinen angezeigt. Ist eine Maschine überlastet muss auf einer anderen Maschine produziert werden."
+    }, {
+      "IMAGE": "assets/pictures/repair-de.png",
+      "TITLE": "Wartung",
+      "DESC": "Die Maschinen können ausfallen und müssen dann über diese Oberfläche repariert werden."
+    }
+  ],
+
+  "LEARN_SLIDES_DIG_TRANS": [
+    {
+      "IMAGE": "assets/pictures/dig-def.png",
+      "TITLE": "Definition",
+      "DESC": "Als Digitale Transformation bezeichnet man die <b>ständige Veränderung</b> der Welt durch <b>digitale Technologien</b>. Ein Beispiel im privaten Bereich ist das Handy. Es wurde ursprünglich als mobiles Telefon entwickelt und heute können Sie mit einem Smartphone bezahlen oder sogar Ihr Zuhause steuern."
+    }, {
+      "IMAGE": "assets/pictures/dig-enab.png",
+      "TITLE": "Enabler",
+      "DESC": "Enabler oder Ermöglicher sind alle neuen <b>Technologien und Potentiale der Digitalen Transformation</b>. Sie bringen allen Beteiligten verschiedene Nutzen. Ein Unternehmen hat durch zum Beispiel durch Enabler das Potential die Logistik im Einkauf zu optimieren, indem Daten automatisch mit dem Zulieferer ausgetauscht werden."
+    }, {
+      "IMAGE": "assets/pictures/dig-act.png",
+      "TITLE": "Akteure",
+      "DESC": "Die Beteiligten der Digitalen Transformation sind neben den <b>Unternehmen</b> auch der <b>Staat</b>, der fördert und reguliert, die <b>Wissenschaft</b>, die neue Erkenntnisse bereitstellt, und außerdem alle <b>Individuen und Gemeinschaften</b>, die die neuen Technologien verwenden."
+    }
+  ],
+  "LEARN_SLIDES_IND40": [
+    {
+      "IMAGE": "assets/pictures/ind-def.png",
+      "TITLE": "Definition",
+      "DESC": "Industrie 4.0 ist ein <b>Forschungsprojekt</b> des Bundesministerium für Bildung und Forschung. Es hat die Aufgabe <b>innovative Lösungen</b> im Rahmen der <b>digitalen Transformation</b> für Unternehmen in der Fertigung zu untersuchen und <b>Strategien zur Bewältigung der Herausforderungen</b> aufzuzeigen."
+    }, {
+      "IMAGE": "assets/pictures/ind-hist.png",
+      "TITLE": "Weshalb 4.0?",
+      "DESC": "4.0 steht für die <b>vierte industrielle Revolution</b>. Die erste industrielle Revolution war Ende des 18. Jahrh. durch die Erfindung der <b>Dampfmaschine</b>. Ein Jahrh. später folgte die zweite durch das Fließband und die <b>Massenfertigung</b>. Elektronische Steuerungen und IT zur <b>Automatisierung der Produktion</b> bezeichnen die dritte industrielle Revolution."
+    }, {
+      "IMAGE": "assets/pictures/ind-40.png",
+      "TITLE": "Grundprinzipien",
+      "DESC": "<b>Vernetzung:</b> Siehe ´Internet der Dinge´<br><b>Informationstransparenz:</b> Sensordaten schaffen virtuelles Abbild der Welt<br><b>Technische Assistenz:</b> Unterstützung durch Daten und Roboter<br><b>Dezentrale Entscheidungen:</b> ´Cyber-physische Systeme´ arbeiten selbstständig"
+    }
+  ],
+  "LEARN_SLIDES_TERMS": [
+    {
+      "IMAGE": "assets/pictures/ind-40.png",
+      "TITLE": "Cyber-physische Systeme",
+      "DESC": "Ein Cyber-physisches System (<b>CPS</b>) verbindet physikalische und digitale Komponenten. Sie bestehen aus <b>eingebetteten (embedded) Systemen mit Sensoren und Aktuatoren</b>, um Daten zu sammeln und mechanische Prozesse zu steuern. Außerdem sind sie über das Internet mit anderen CPS verbunden und tauschen dadurch Informationen aus."
+    }, {
+      "IMAGE": "assets/pictures/terms-iot.png",
+      "TITLE": "Internet der Dinge",
+      "DESC": "Das Internet der Dinge oder Internet of Things (<b>IoT</b>) ist ein <b>Netzwerk</b> von physikalischen Geräten und allen <b>Objekten, die die Fähigkeit besitzen sich zu verbinden und Daten auszutauschen</b>."
+    }, {
+      "IMAGE": "assets/pictures/terms-ios.png",
+      "TITLE": "Internet der Dienste",
+      "DESC": "Das Internet der Dienste oder Internet of Services (<b>IoS</b>) stellt <b>webbasierte Dienstleistungen</b> im Rahmen des IoT bereit. Die Dienste verarbeiten die <b>erfassten Sensordaten</b> und erlauben zB. <b>Cloud Anwendungen</b>, Big Data Analysen oder Echtzeitauswertungen."
+    }, {
+      "IMAGE": "assets/pictures/terms-rfid.png",
+      "TITLE": "RFID",
+      "DESC": "RFID steht für <b>Radio-Frequenzy Identification</b>. Ein RFID-System besteht immer aus einem Transponder oder im englischen <b>Tag</b> und einem Lesegerät. Ein Tag <b>speichert Daten ohne Stromversorgung</b> zu benötigen. Das Lesegerät liest den Tag <b>berührungslos</b> aus und kann ihn sogar <b>lokalisieren</b>. Das macht die Technologie gerade für die Logistik interessant."
+    }, {
+      "IMAGE": "assets/pictures/terms-sf.png",
+      "TITLE": "Intelligente Fabrik",
+      "DESC": "Als intelligente Fabrik oder <b>´Smart Factory´</b> bezeichnet man eine Fabrik die <b>Technologien der Industrie 4.0 in der Produktion</b> benutzt. Dadurch kann z.B. auf Störungen und unvorhersehbare Ereignisse schneller reagiert werden."
+    }, {
+      "IMAGE": "assets/pictures/terms-hor.png",
+      "TITLE": "Horizontale Integration",
+      "DESC": "Horizontale Integration kann <b>innerhalb und außerhalb</b> eines Unternehmens geschehen. Innerhalb bedeutet den <b>optimalen Material- und Datenfluss entlang der Wertschöpfungskette</b>. Extern bedeutet dasselbe, allerdings <b>über die Grenzen eines Unternehmens</b> hinaus."
+    }, {
+      "IMAGE": "assets/pictures/terms-vert.png",
+      "TITLE": "Vertikale Integration",
+      "DESC": "Als Vertikale Integration bezeichnet man den <b>optimalen Datenfluss zwischen allen Ebenen eines Unternehmens</b>. Das bedeutet von der Top-Management Ebene, bis hinunter zu den Produktionsmaschinen und auch in umgekehrter Reihenfolge."
+    }
+  ]
+}

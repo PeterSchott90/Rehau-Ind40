@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ 'GAME_OVER_TITLE' | translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h1>{{ 'GAME_OVER_TITLE' | translate }}</h1>
+  <ion-list>
+    <ion-list-header>
+      {{ 'GAME_OVER_PART' | translate }}:
+    </ion-list-header>
+    <ion-item *ngFor="let scoreboardEntry of this.userService.scoreboardEntries">
+      <h3>{{scoreboardEntry.name}}</h3>
+      <p *ngIf="scoreboardEntry.score > 0">({{scoreboardEntry.score}})</p>
+    </ion-item>
+  </ion-list>
+  <div class="btn-bottom">
+    <button ion-button color="primary" block outline [disabled]="!feedbackEnabled" (click)="presentPrompt()">Feedback</button>
+    <button ion-button color="primary" block (click)="reload()">{{ 'GAME_OVER_BTN' | translate }}</button>
+  </div>
+
+</ion-content>

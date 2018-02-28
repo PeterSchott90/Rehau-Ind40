@@ -1,0 +1,87 @@
+package de.fau.rehau.industrie40.businesslayer;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import de.fau.rehau.industrie40.demo.businesslayer.entities.FauRehauGroup;
+import de.fau.rehau.industrie40.demo.businesslayer.entities.FauRehauQuest;import de.fau.rehau.industrie40.demo.businesslayer.timers.FauRehauTick;
+import de.fau.rehau.industrie40.demo.businesslayer.timers.FauRehauTickTimer;
+
+public class FauRehauContext {
+	private static int totalSessions = 0;
+	private static int questcounter = 0;
+
+	private static boolean bGameStarted = false;
+	private static Timer timer = new Timer(true);
+	private static ArrayList<FauRehauGroup> groupCollection = new ArrayList<FauRehauGroup>();
+	
+	private static FauRehauTickTimer timerTask = new FauRehauTickTimer();
+	{
+		timer.scheduleAtFixedRate(timerTask, 500, 500);
+	}
+	
+	public static void startGame(float time) {
+		bGameStarted = true;
+	}
+	public static void reset() {
+		groupCollection.clear();
+	}
+
+	public static void stopGame() {
+		bGameStarted = false;
+	}
+
+	public static void addToHeartBeat(FauRehauTick frTick) {
+		timerTask.addTickCall(frTick);
+	}
+	
+	public static boolean hasGameStarted() {
+		return bGameStarted;
+	}
+
+	public static FauRehauGroup createNewGroup(String groupCode) {
+		FauRehauGroup frGroup = new FauRehauGroup();
+		frGroup.setGroupCode(groupCode);
+		frGroup.setGroupId(totalSessions);
+		totalSessions++;
+		return frGroup;
+	}
+
+	public static void addQuest(int a, int b, int c, int points, String name) {
+		for(FauRehauGroup group: groupCollection) {
+			FauRehauQuest quest = new FauRehauQuest(a, b, c, points, name);
+			quest.setId(questcounter);
+			group.questLog.add(quest);	
+		}
+		questcounter++;
+	}
+
+	public static FauRehauGroup getGroupById(int groupId) {
+		for(FauRehauGroup frGroup : groupCollection) {
+			if(frGroup.getGroupId() == groupId) {
+				return frGroup;
+			}
+		}
+		return null;
+	}
+	
+	public static ArrayList<FauRehauGroup> getAllGroups() {
+		List<Object> objectList = new ArrayList<Object>();
+		for(FauRehauGroup frGroup: groupCollection) {
+			objectList.add(frGroup.getGroupCode());
+			objectList.add(frGroup.getGroupId());
+		}
+		return groupCollection;
+	}
+	
+	public static FauRehauGroup createGroupOrReturn(String groupCode) {
+		for(FauRehauGroup frGroup: groupCollection) {
+			if(frGroup.getGroupCode().equals(groupCode)){
+				return frGroup;
+			}
+		}
+		FauRehauGroup frGroup = createNewGroup(groupCode);
+		groupCollection.add(frGroup);
+		return frGroup;
+	}
+}

@@ -1,0 +1,33 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav class="sidenav">
+    <mat-nav-list>
+      <a mat-list-item (click)="sidenav.close()" [routerLink]="['/']">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <span mat-line>Home</span>
+      </a>
+      <a mat-list-item (click)="sidenav.close()" [routerLink]="['/game-rules']">
+        <mat-icon mat-list-icon>games</mat-icon>
+        <span mat-line>Game Rules</span>
+      </a>
+      <a mat-list-item (click)="sidenav.close()" [routerLink]="['/quiz']">
+        <mat-icon mat-list-icon>question_answer</mat-icon>
+        <span mat-line>Quiz</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div class="my-content">
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>{{title}}</span>
+      <span class="fill-remaining-space"></span>
+
+      <!-- <button mat-icon-button (click)="changeLanguage()">
+        <mat-icon>settings</mat-icon>
+      </button> -->
+
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

@@ -1,0 +1,29 @@
+package de.fau.rehau.industrie40.demo.businesslayer.timers;
+
+import java.util.ArrayList;
+import java.util.TimerTask;
+
+public class FauRehauTickTimer extends TimerTask{
+	
+	private ArrayList<FauRehauTick> frTickObjectList = new ArrayList<FauRehauTick>();
+	
+	public FauRehauTickTimer() {
+		super();
+	}
+
+	public void addTickCall(FauRehauTick frTickObject) {
+		this.frTickObjectList.add(frTickObject);
+	}
+	
+	public void removeTickCall(FauRehauTick frTickObject) {
+		this.frTickObjectList.remove(frTickObject);
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for(FauRehauTick frTick : frTickObjectList) {
+			frTick.tick();
+		}
+	}
+
+}

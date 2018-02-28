@@ -1,0 +1,50 @@
+<mat-card>
+  <mat-card-title>Push new Quiz</mat-card-title>
+  <mat-card-content class="flex-container" fxLayoutWrap="wrap" fxLayout="row" fxLayoutAlign="center" fxLayoutAlign.xs="start">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput required ngModel name="contextDE" placeholder="Quiz Context Deutsch">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput required ngModel name="contextEN" placeholder="Quiz Context English">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput required ngModel name="questionDE" placeholder="Question Deutsch">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput required ngModel name="questionEN" placeholder="Question English">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput required ngModel name="aDE" placeholder="Answer A Deutsch">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput required ngModel name="aEN" placeholder="Answer A English">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput required ngModel name="bDE" placeholder="Answer B Deutsch">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput required ngModel name="bEN" placeholder="Answer B English">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput required ngModel name="cDE" placeholder="Answer C Deutsch">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput required ngModel name="cEN" placeholder="Answer C English">
+        </mat-form-field>
+        <mat-radio-group ngModel name="correct">
+          <label>Correct Answer: </label>
+          <mat-radio-button value="a">A</mat-radio-button>
+          <mat-radio-button value="b">B</mat-radio-button>
+          <mat-radio-button value="c">C</mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field>
+          <input type="number" matInput required ngModel name="points" placeholder="Bonus Points">
+        </mat-form-field>
+      </div>
+
+      <button mat-raised-button color="primary">Submit Quiz Question</button>
+    </form>
+  </mat-card-content>
+</mat-card>

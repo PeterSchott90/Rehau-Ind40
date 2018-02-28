@@ -1,0 +1,161 @@
+package de.fau.rehau.industrie40.demo.businesslayer.entities.orders;
+
+import java.util.ArrayList;
+import de.fau.rehau.industrie40.demo.businesslayer.entities.FauRehauAttribute;
+import de.fau.rehau.industrie40.demo.businesslayer.entities.FauRehauMachine;
+import de.fau.rehau.industrie40.demo.businesslayer.entities.user.FauRehauConsumer;
+
+public abstract class FauRehauOrder {
+	private FauRehauConsumer owner;
+	private double progress;
+	private String status = "waiting";
+	private int id;
+	protected String type;
+	protected int points;
+	private int ammount;
+	protected int cost;
+	protected double timeCost;
+	private double load;
+	private ArrayList<FauRehauAttribute> fauRehauAttributes;
+
+	public ArrayList<FauRehauAttribute> getFauRehauAttributes() {
+		return fauRehauAttributes;
+	}
+	public void setFauRehauAttributes(ArrayList<FauRehauAttribute> fauRehauAttributes) {
+		this.fauRehauAttributes = fauRehauAttributes;
+	}
+	public String getType() {
+		return this.type;
+	}
+	public void setAmmount(int ammount) {
+		this.ammount = ammount;
+	}
+	public int getAmmount() {
+		return this.ammount;
+	}
+	public void setOwner(FauRehauConsumer owner) {
+		// TODO Auto-generated method stub
+		this.owner = owner;
+	}
+	public double getTimeCost() {
+		return this.timeCost;
+	}
+	
+	public double getLoadPerTick() {
+		return (this.getLoad() * this.getAmmount()) / ((this.getTimeCost() * this.getAmmount()) / 0.5);
+	}
+	
+	public void increaseProgress(FauRehauMachine machine) {
+		this.setProgress(this.getProgress() + (0.5 / (this.timeCost*this.ammount) * 100));
+
+		for(FauRehauAttribute attribute : this.fauRehauAttributes) {
+			if(Math.random() >= 0.5) {
+				attribute.setCurrentValue(attribute.getCurrentValue() + (int)(Math.random() * attribute.spreadVar));
+			} else {
+				attribute.setCurrentValue(attribute.getCurrentValue() - (int)(Math.random() * attribute.spreadVar));
+			}
+			if (attribute.getCurrentValue() < attribute.getMinValue() || attribute.getCurrentValue() > attribute.getMaxValue()) {
+				this.owner.addMessage("Fehler! - " + attribute.getName());
+				machine.setCurrentOrder(null);
+				this.setStatus("broken");
+			}
+		}
+	}
+
+	public int getOwnerId() {
+		// TODO Auto-generated method stub
+		return this.owner.getId();
+	}
+	public FauRehauConsumer getOwner() {
+		return this.owner;
+	}
+	public FauRehauOrder() {
+		this.ammount = 1;
+		
+		ArrayList<FauRehauAttribute> frAttributeList = new ArrayList<FauRehauAttribute>();
+		
+		FauRehauAttribute frAttribute = new FauRehauAttribute();
+		frAttribute.spreadVar = 3;
+		frAttribute.setName("Spritzdruck");
+		frAttribute.setMinValue(500);
+		frAttribute.setMaxValue(550);
+		frAttribute.setOptimalValue(525);
+		frAttribute.setCurrentValue(525);
+		
+		frAttributeList.add(frAttribute);
+		
+		FauRehauAttribute frAttrbute2 = new FauRehauAttribute();
+		frAttrbute2.spreadVar = 1;
+		frAttrbute2.setName("Spritztemperatur");
+		frAttrbute2.setMinValue(260);
+		frAttrbute2.setMaxValue(270);
+		frAttrbute2.setOptimalValue(265);
+		frAttrbute2.setCurrentValue(265);
+		
+		frAttributeList.add(frAttrbute2);
+		
+		FauRehauAttribute frAttrbute3 = new FauRehauAttribute();
+		frAttrbute3.spreadVar = 0.5;
+		frAttrbute3.setName("Kühlmitteltemperatur");
+		frAttrbute3.setMinValue(37);
+		frAttrbute3.setMaxValue(42);
+		frAttrbute3.setOptimalValue(40);
+		frAttrbute3.setCurrentValue(40);
+		
+		frAttributeList.add(frAttrbute3);
+		
+		this.setFauRehauAttributes(frAttributeList);
+	}
+
+	public FauRehauOrder(int ammount) {
+		this.ammount = ammount;
+	}
+	public void setFinished() {
+		setStatus("completed");
+		this.owner.addMessage("Bestellung abgeschlossen: " + ammount + " * " + this.type);
+		this.owner.inventory.add(type, ammount);
+		this.owner.getScoreboardUser().score += points * ammount;
+	}
+
+	public void test() {
+		
+	}
+	public double getProgress() {
+		return progress;
+	}
+	public void setProgress(double d) {
+		this.progress = d;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getPoints() {
+		return points;
+	}
+	public void setPoints(int points) {
+		this.points = points;
+	}
+	public int getCost() {
+		return cost;
+	}
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+
+	public double getLoad() {
+		return load;
+	}
+
+	public void setLoad(double d) {
+		this.load = d;
+	}
+}

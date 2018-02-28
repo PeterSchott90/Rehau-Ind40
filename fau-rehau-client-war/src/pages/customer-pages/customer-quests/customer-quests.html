@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-left>
+        <ion-icon name="cash"></ion-icon>
+        {{ this.userService.currentPlayer.currentMoney }} €
+      </button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button ion-button>
+        # {{this.userService.currentPlayer.currentScore}}
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      {{ 'CUST_QUESTS_OPEN_HEAD' | translate }}
+    </ion-list-header>
+    <ion-item *ngFor="let item of this.userService.questQueue">
+        <button ion-button (tap)="submit(item);" item-right>{{ 'CUST_QUESTS_TAKE' | translate}}</button>
+        <h2>{{ 'CUST_QUESTS_ORDER' | translate }}</h2>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4>Light:</ion-col>
+            <ion-col col-4>Med:</ion-col>
+            <ion-col col-4>Pro:</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-4>{{item.light}}</ion-col>
+            <ion-col col-4>{{item.med}}</ion-col>
+            <ion-col col-4>{{item.pro}}</ion-col>
+          </ion-row>
+        </ion-grid>
+        <p *ngIf="item.bonus !== 0">BONUS: {{item.points}}</p>
+    </ion-item>
+  </ion-list>
+<ion-list>
+    <ion-list-header>
+      {{ 'CUST_QUESTS_DONE_HEAD' | translate }}
+    </ion-list-header>
+        <ion-item *ngFor="let item of this.userService.questsDone">
+        <h2>{{item.name}}</h2>
+        <ion-grid>
+  <ion-row>
+    <ion-col width-33>{{ 'CUST_QUESTS_LIGHT' | translate }}{{item.light}}</ion-col>
+        <ion-col width-33>{{ 'CUST_QUESTS_MED' | translate }}{{item.med}}</ion-col>
+
+    <ion-col width-33>{{ 'CUST_QUESTS_PRO' | translate }}{{item.pro}}</ion-col>
+      <ion-row>
+        <p *ngIf="item.points !== 0">BONUS: {{item.points}}</p>
+      </ion-row>
+  </ion-row>
+</ion-grid>
+
+    </ion-item>
+  </ion-list>
+  <ion-footer>
+        <ion-toolbar>
+           <ion-row>
+    <ion-col width-33>L: {{this.userService.currentPlayer.lightWeight}}</ion-col>
+        <ion-col width-33>M: {{this.userService.currentPlayer.midWeight}}</ion-col>
+
+    <ion-col width-33>P: {{this.userService.currentPlayer.proWeight}}</ion-col>
+  </ion-row>
+        </ion-toolbar>
+  </ion-footer>
+</ion-content>
+

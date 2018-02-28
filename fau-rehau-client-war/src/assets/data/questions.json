@@ -1,0 +1,39 @@
+{
+	"questions": [
+
+		{
+			"flashCardFront": "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quam delectus ipsa reprehenderit. Architecto obcaecati, aut, minus veniam odit dolore sed veritatis placeat officia, animi numquam distinctio quas! Incidunt, corrupti.</p>",
+			"flashCardBack": "Helicopter",
+			"flashCardFlipped": false,
+			"questionText": "What is this?",
+			"answers": [
+				{"answer": "Helicopter", "correct": true, "selected": false},
+				{"answer": "Plane", "correct": false, "selected": false},
+				{"answer": "Truck", "correct": false, "selected": false}
+			]
+		},
+		{
+			"flashCardFront": "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quam delectus ipsa reprehenderit. Architecto obcaecati, aut, minus veniam odit dolore sed veritatis placeat officia, animi numquam distinctio quas! Incidunt, corrupti.</p>",
+			"flashCardBack": "Plane",
+			"flashCardFlipped": false,
+			"questionText": "What is this?",
+			"answers": [
+				{"answer": "Helicopter", "correct": false, "selected": false},
+				{"answer": "Plane", "correct": true, "selected": false},
+				{"answer": "Truck", "correct": false, "selected": false}
+			]
+		},
+		{
+			"flashCardFront": "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quam delectus ipsa reprehenderit. Architecto obcaecati, aut, minus veniam odit dolore sed veritatis placeat officia, animi numquam distinctio quas! Incidunt, corrupti.</p>",
+			"flashCardBack": "Truck",
+			"flashCardFlipped": false,
+			"questionText": "What is this?",
+			"answers": [
+				{"answer": "Helicopter", "correct": false, "selected": false},
+				{"answer": "Plane", "correct": false, "selected": false},
+				{"answer": "Truck", "correct": true, "selected": false}
+			]
+		}
+
+	]
+}

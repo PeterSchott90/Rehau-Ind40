@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-left>
+        <ion-icon name="cash"></ion-icon>
+        {{ this.userService.currentPlayer.currentMoney }} €
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      {{ 'PROD_MACH_PLURAL' | translate }}
+    </ion-list-header>
+    <ion-item *ngFor="let machine of this.userService.currentPlayer.machines">
+        <h2>{{ 'PROD_MACH_SINGULAR' | translate }} - {{machine.id}}</h2>
+        <h3>{{ 'PROD_MACH_COSTS' | translate }}: {{machine.repairCost}}</h3>
+        <h3>{{ 'PROD_MACH_WORKLOAD' | translate }}: {{machine.workloadPercentage}}%</h3>
+        <p>Status: {{machine.status}}</p>
+        <button *ngIf="machine.status !== 'REPAIRING'" (tap)="repair(machine);" ion-button clear item-right>{{ 'PROD_MACH_REPAIR' | translate }}<br>({{machine.freezeCost}}) s.</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

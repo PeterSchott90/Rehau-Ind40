@@ -1,0 +1,38 @@
+<mat-card>
+  <mat-card-title>Game Control</mat-card-title>
+  <mat-card-content class="flex-container" fxLayoutWrap="wrap" fxLayout="row" fxLayoutAlign="center" fxLayoutAlign.xs="start">
+
+    <mat-card *ngIf="gameStarted; else greenLight" class="flex-item question-card green-light">
+      <mat-card-header>
+        <mat-card-title class="title">
+          Game started
+        </mat-card-title>
+        <mat-card-subtitle>
+
+        </mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+    <ng-template #greenLight>
+      <mat-card class="flex-item question-card green" (click)="startGame()">
+        <mat-card-header>
+          <mat-card-title class="title">
+            Start
+          </mat-card-title>
+          <mat-card-subtitle>
+            Start the game.....
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </ng-template>
+    <mat-card class="flex-item question-card red" (click)="stopGame()">
+      <mat-card-header>
+        <mat-card-title class="title">
+          Stop
+        </mat-card-title>
+        <mat-card-subtitle>
+          Stop the game.....
+        </mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </mat-card-content>
+</mat-card>

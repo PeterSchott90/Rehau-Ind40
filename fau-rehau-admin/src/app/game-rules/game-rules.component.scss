@@ -1,0 +1,15 @@
+
+
+mat-card {
+  margin: 15px;
+}
+
+
+.example-container {
+  display: block;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}

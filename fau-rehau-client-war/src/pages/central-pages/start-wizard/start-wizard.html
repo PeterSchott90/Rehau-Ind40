@@ -1,0 +1,130 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Rehau Ind. 4.0</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-simple-wizard [(step)]="step" [showSteps]="true" (finish)="onFinish()" [finishIcon]="'done-all'" [(stepCondition)]="stepCondition">
+    <!-- #1 Language Selection -->
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-icon class="card-wizard-icon" name="globe" color="primary"></ion-icon>
+        <ion-card-content>
+          <ion-card-title>
+            {{ 'WELCOME' | translate }}
+          </ion-card-title>
+
+          <p>
+            {{ 'WELCOME_PAR' | translate}}
+          </p>
+          <ion-list radio-group (ionChange)="changeLanguage()" [(ngModel)]="language">
+            <ion-item>
+              <ion-label>Deutsch</ion-label>
+              <ion-radio value="de" checked></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>English</ion-label>
+              <ion-radio value="en"></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+    <!-- #2 Name Selection -->
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-icon class="card-wizard-icon" name="person" color="primary"></ion-icon>
+        <ion-card-content>
+          <ion-card-title>
+            {{ 'NAME_SEL_TITLE' | translate }}
+          </ion-card-title>
+          <p>
+            {{ 'NAME_SEL_NAME' | translate }}
+          </p>
+          <p class="input-field">
+            <ion-list>
+              <ion-item>
+                <ion-label color="primary" floating>{{ 'NAME_SEL_TITLE' | translate }}</ion-label>
+                <ion-input [(ngModel)]="inputName" type="text" (input)="textChange($event)"></ion-input>
+              </ion-item>
+            </ion-list>
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+    <!-- #3 Group Selection -->
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-icon class="card-wizard-icon" name="qr-scanner" color="primary"></ion-icon>
+        <ion-card-content>
+          <ion-card-title>
+            {{ 'GROUP_SEL_TITLE' | translate }}
+          </ion-card-title>
+          <p>
+            {{ 'GROUP_SEL_HEAD' | translate }}
+          </p>
+          <p>
+            <button ion-button color="primary" outline block class="qr-btn" (tap)="scanGroupCode();">
+              {{ 'QR_BTN' | translate }}
+            </button>
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+    <!-- #4 Role Selection -->
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-icon class="card-wizard-icon" name="people" color="primary"></ion-icon>
+        <ion-card-content>
+          <ion-card-title>
+            {{ 'ROLE_SEL_TITLE' | translate }}
+          </ion-card-title>
+          <ion-list>
+            <ion-item (tap)="selectRole('consumer')">
+              <ion-avatar item-left>
+                <ion-icon class="avatar-icon" name="man" color="primary"></ion-icon>
+              </ion-avatar>
+              <h2>{{ 'ROLE_SEL_CUST_HEAD' | translate }}</h2>
+              <h3>{{ 'ROLE_SEL_CUST_SUBHEAD' | translate }}</h3>
+              <p>{{ 'ROLE_SEL_CUST_PAR' | translate }}</p>
+            </ion-item>
+            <ion-item (tap)="selectRole('producer')">
+              <ion-avatar item-left>
+                <ion-icon class="avatar-icon" name="hammer" color="primary"></ion-icon>
+              </ion-avatar>
+              <h2>{{ 'ROLE_SEL_PROD_HEAD' | translate }}</h2>
+              <h3>{{ 'ROLE_SEL_PROD_SUBHEAD' | translate }}</h3>
+              <p>{{ 'ROLE_SEL_PROD_PAR' | translate }}</p>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+    <!-- #5 Final Page -->
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-icon class="card-wizard-icon" name="bulb" color="primary"></ion-icon>
+        <ion-card-content>
+          <ion-card-title>
+            {{ 'START_HEAD' | translate }}
+          </ion-card-title>
+          <p>
+            {{ 'START_PAR' | translate }}
+          </p>
+          <button ion-button block outline (click)="confirm()">
+            {{ 'START_PAR_BTN' | translate }}
+          </button>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+  </ion-simple-wizard>
+
+</ion-content>

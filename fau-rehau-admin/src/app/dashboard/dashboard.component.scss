@@ -1,0 +1,41 @@
+// Import theming functions
+@import '~@angular/material/theming';
+
+$app-green: #4CAF50;
+$app-green-light: #A5D6A7;
+$app-red: #F44336;
+
+
+mat-card-content>:last-child, mat-card>:last-child{
+  margin-bottom: 15px;
+}
+mat-card-content>:first-child, mat-card>:first-child{
+  margin-top: 15px;
+}
+mat-card {
+  margin: 15px;
+}
+.question-card {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  width: 200px;
+  min-width: 200px;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.green {
+  background-color: $app-green;
+}
+
+.green-light {
+  background-color: $app-green-light;
+}
+
+.red {
+  background-color: $app-red;
+}
